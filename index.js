@@ -1,12 +1,7 @@
 
 const sum = function(fromN, toN) {
-  let sumResult = 0;
-
-  for (let i = fromN; i <= toN; i++) {
-    sumResult += i;
-  }
-
-  return sumResult;
+  if (fromN >= toN) return toN;
+  return fromN + sum(fromN + 1, toN);
 };
 
 module.exports = sum;
